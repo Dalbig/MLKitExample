@@ -12,9 +12,17 @@
 		7F14B8F2211427CA003163FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F14B8F0211427CA003163FB /* Main.storyboard */; };
 		7F14B8F4211427CB003163FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F14B8F3211427CB003163FB /* Assets.xcassets */; };
 		7F14B8F7211427CB003163FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F14B8F5211427CB003163FB /* LaunchScreen.storyboard */; };
+		7F14B8FF21142927003163FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F14B8FE21142927003163FB /* GoogleService-Info.plist */; };
+		7F14B90321143266003163FB /* BarcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14B90221143266003163FB /* BarcodeViewController.swift */; };
+		7FE95E5321143A150081ABE5 /* FaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE95E5221143A150081ABE5 /* FaceViewController.swift */; };
+		7FE95E5921143CA50081ABE5 /* ImageLabelingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE95E5821143CA50081ABE5 /* ImageLabelingViewController.swift */; };
+		7FE95E5B21143D340081ABE5 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE95E5A21143D340081ABE5 /* TextViewController.swift */; };
+		7FE95E5D21143D810081ABE5 /* LandmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE95E5C21143D810081ABE5 /* LandmarkViewController.swift */; };
+		B020D91174CE027D8E2BB8B1 /* Pods_MLKitExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C204822FE5B7E5BE8A4EEF53 /* Pods_MLKitExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33F47C279530BE1C1E0A28FC /* Pods-MLKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLKitExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-MLKitExample/Pods-MLKitExample.release.xcconfig"; sourceTree = "<group>"; };
 		7F14B8E9211427CA003163FB /* MLKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MLKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F14B8EC211427CA003163FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F14B8EE211427CA003163FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +30,14 @@
 		7F14B8F3211427CB003163FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F14B8F6211427CB003163FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F14B8F8211427CB003163FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F14B8FE21142927003163FB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7F14B90221143266003163FB /* BarcodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeViewController.swift; sourceTree = "<group>"; };
+		7FE95E5221143A150081ABE5 /* FaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceViewController.swift; sourceTree = "<group>"; };
+		7FE95E5821143CA50081ABE5 /* ImageLabelingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLabelingViewController.swift; sourceTree = "<group>"; };
+		7FE95E5A21143D340081ABE5 /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
+		7FE95E5C21143D810081ABE5 /* LandmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkViewController.swift; sourceTree = "<group>"; };
+		C204822FE5B7E5BE8A4EEF53 /* Pods_MLKitExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MLKitExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2BD5CD6B70586A341B7B389 /* Pods-MLKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLKitExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MLKitExample/Pods-MLKitExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B020D91174CE027D8E2BB8B1 /* Pods_MLKitExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +57,8 @@
 			children = (
 				7F14B8EB211427CA003163FB /* MLKitExample */,
 				7F14B8EA211427CA003163FB /* Products */,
+				ABA5FCF2E9ECE320A5BB8770 /* Pods */,
+				B6D1E70167A5AB9D2BF7A036 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +79,31 @@
 				7F14B8F3211427CB003163FB /* Assets.xcassets */,
 				7F14B8F5211427CB003163FB /* LaunchScreen.storyboard */,
 				7F14B8F8211427CB003163FB /* Info.plist */,
+				7F14B8FE21142927003163FB /* GoogleService-Info.plist */,
+				7F14B90221143266003163FB /* BarcodeViewController.swift */,
+				7FE95E5221143A150081ABE5 /* FaceViewController.swift */,
+				7FE95E5821143CA50081ABE5 /* ImageLabelingViewController.swift */,
+				7FE95E5A21143D340081ABE5 /* TextViewController.swift */,
+				7FE95E5C21143D810081ABE5 /* LandmarkViewController.swift */,
 			);
 			path = MLKitExample;
+			sourceTree = "<group>";
+		};
+		ABA5FCF2E9ECE320A5BB8770 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C2BD5CD6B70586A341B7B389 /* Pods-MLKitExample.debug.xcconfig */,
+				33F47C279530BE1C1E0A28FC /* Pods-MLKitExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B6D1E70167A5AB9D2BF7A036 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C204822FE5B7E5BE8A4EEF53 /* Pods_MLKitExample.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +113,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F14B8FB211427CB003163FB /* Build configuration list for PBXNativeTarget "MLKitExample" */;
 			buildPhases = (
+				780218E1D402F3DAD9D141DF /* [CP] Check Pods Manifest.lock */,
 				7F14B8E5211427CA003163FB /* Sources */,
 				7F14B8E6211427CA003163FB /* Frameworks */,
 				7F14B8E7211427CA003163FB /* Resources */,
+				BCB3E3B0DF265F24FAA2267E /* [CP] Embed Pods Frameworks */,
+				69BDC3FC915E83080F169331 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,10 +170,80 @@
 				7F14B8F7211427CB003163FB /* LaunchScreen.storyboard in Resources */,
 				7F14B8F4211427CB003163FB /* Assets.xcassets in Resources */,
 				7F14B8F2211427CA003163FB /* Main.storyboard in Resources */,
+				7F14B8FF21142927003163FB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		69BDC3FC915E83080F169331 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MLKitExample/Pods-MLKitExample-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/GoogleMobileVision/GoogleMVFaceDetectorResources.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/GoogleMobileVision/GoogleMVTextDetectorResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMVFaceDetectorResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMVTextDetectorResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MLKitExample/Pods-MLKitExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		780218E1D402F3DAD9D141DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MLKitExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCB3E3B0DF265F24FAA2267E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MLKitExample/Pods-MLKitExample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MLKitExample/Pods-MLKitExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7F14B8E5211427CA003163FB /* Sources */ = {
@@ -136,7 +251,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F14B8EF211427CA003163FB /* ViewController.swift in Sources */,
+				7FE95E5921143CA50081ABE5 /* ImageLabelingViewController.swift in Sources */,
+				7FE95E5321143A150081ABE5 /* FaceViewController.swift in Sources */,
 				7F14B8ED211427CA003163FB /* AppDelegate.swift in Sources */,
+				7F14B90321143266003163FB /* BarcodeViewController.swift in Sources */,
+				7FE95E5B21143D340081ABE5 /* TextViewController.swift in Sources */,
+				7FE95E5D21143D810081ABE5 /* LandmarkViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,11 +398,13 @@
 		};
 		7F14B8FC211427CB003163FB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2BD5CD6B70586A341B7B389 /* Pods-MLKitExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9H2N5MANM3;
 				INFOPLIST_FILE = MLKitExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,11 +418,13 @@
 		};
 		7F14B8FD211427CB003163FB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33F47C279530BE1C1E0A28FC /* Pods-MLKitExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9H2N5MANM3;
 				INFOPLIST_FILE = MLKitExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
