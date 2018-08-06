@@ -40,6 +40,7 @@ class FaceViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            let spinner = UIViewController.displaySpinner(onView: self.view)
             imageView.image = pickedImage
             
             let faceDetector = vision.faceDetector(options: options)
@@ -50,6 +51,7 @@ class FaceViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 guard error == nil, let faces = faces, !faces.isEmpty else {
                     self.dismiss(animated: true, completion: nil)
                     self.resultView.text = "No Face Detected"
+                    UIViewController.removeSpinner(spinner: spinner)
                     return
                 }
                 self.resultView.text = self.resultView.text + "I see \(faces.count) face(s).\n\n"
@@ -79,6 +81,7 @@ class FaceViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                         }
                     }
                 }
+                UIViewController.removeSpinner(spinner: spinner)
             }
         }
         dismiss(animated: true, completion: nil)

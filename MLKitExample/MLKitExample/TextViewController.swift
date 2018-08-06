@@ -40,6 +40,7 @@ class TextViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            let spinner = UIViewController.displaySpinner(onView: self.view)
             imageView.image = pickedImage
 
             let visionImage = VisionImage(image: pickedImage)
@@ -47,6 +48,7 @@ class TextViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 guard error == nil, let result = result else {
                     self.resultView.text = "Could not recognize any text"
                     self.dismiss(animated: true, completion: nil)
+                    UIViewController.removeSpinner(spinner: spinner)
                     return
                 }
 
@@ -54,6 +56,7 @@ class TextViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 for block in result.blocks {
                     self.resultView.text = self.resultView.text + "\(block.text)\n\n"
                 }
+                UIViewController.removeSpinner(spinner: spinner)
 
             }
         }

@@ -39,21 +39,24 @@ class ImageLabelingViewController: UIViewController, UIImagePickerControllerDele
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            let spinner = UIViewController.displaySpinner(onView: self.view)
             imageView.image = pickedImage
             let labelDetector = vision.labelDetector()
             let visionImage = VisionImage(image: pickedImage)
-            
+            print("aaaa")
             self.resultView.text = ""
             labelDetector.detect(in: visionImage) { (labels, error) in
                 guard error == nil, let labels = labels, !labels.isEmpty else {
                     self.resultView.text = "Could not label this image"
                     self.dismiss(animated: true, completion: nil)
+                    UIViewController.removeSpinner(spinner: spinner)
                     return
                 }
                 
                 for label in labels {
                     self.resultView.text = self.resultView.text + "\(label.label) - \(label.confidence * 100.0)%\n"
                 }
+                UIViewController.removeSpinner(spinner: spinner)
             }
         }
         dismiss(animated: true, completion: nil)

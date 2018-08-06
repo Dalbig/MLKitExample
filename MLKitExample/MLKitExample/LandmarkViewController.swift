@@ -40,6 +40,7 @@ class LandmarkViewController: UIViewController, UIImagePickerControllerDelegate,
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            let spinner = UIViewController.displaySpinner(onView: self.view)
             imageView.image = pickedImage
             
             let landmarkDetector = vision.cloudLandmarkDetector(options: options)
@@ -50,6 +51,7 @@ class LandmarkViewController: UIViewController, UIImagePickerControllerDelegate,
                 guard error == nil, let landmarks = landmarks, !landmarks.isEmpty else {
                     self.resultView.text = "No landmarks detected"
                     self.dismiss(animated: true, completion: nil)
+                    UIViewController.removeSpinner(spinner: spinner)
                     return
                 }
                 
@@ -58,6 +60,7 @@ class LandmarkViewController: UIViewController, UIImagePickerControllerDelegate,
                     let confidence = Float(truncating: landmark.confidence!)
                     self.resultView.text = self.resultView.text + "\(landmarkDesc) - \(confidence * 100.0)%\n\n"
                 }
+                UIViewController.removeSpinner(spinner: spinner)
             }
         }
         dismiss(animated: true, completion: nil)
